@@ -9,7 +9,7 @@ const App = () => {
     firstName: ""
   });
 
- useFetch('http://numbersapi.com/43/trivia')
+ const {dating, loading} = useFetch('http://numbersapi.com/43/trivia')
 
   return (
     <div>
