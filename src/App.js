@@ -9,10 +9,11 @@ const App = () => {
     firstName: ""
   });
 
- const {dating, loading} = useFetch('http://numbersapi.com/43/trivia')
+ const {data, loading} = useFetch('http://numbersapi.com/43/trivia')
 
   return (
     <div>
+      <div>{loading ? "loading ..." : data}</div>
       <input
         name="firstName"
         placeholder="First name"
