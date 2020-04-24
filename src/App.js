@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "./useForm";
+import {useFetch} from "./UseFetch"
 
 const App = () => {
   const [values, handleChange] = useForm({
@@ -7,6 +8,8 @@ const App = () => {
     password: "",
     firstName: ""
   });
+
+ useFetch('http://numbersapi.com/43/trivia')
 
   return (
     <div>
@@ -25,29 +28,7 @@ const App = () => {
       <input
         type="password"
         name="password"
-        placeholder="password"return (
-    <div>
-      <input
-        name="firstName"
-        placeholder="First name"
-        values={values.firstName}
-        onChange={handleChange}
-      />
-      <input
-        name="email"
-        placeholder="email address"
-        values={values.email}
-        onChange={handleChange}
-      />
-      <input
-        type="password"
-        name="password"
         placeholder="password"
-        value={values.password}
-        onChange={handleChange}
-      />
-    </div>
-  );
         value={values.password}
         onChange={handleChange}
       />
