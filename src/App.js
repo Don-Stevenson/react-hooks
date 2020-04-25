@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "./useForm";
-import {useFetch} from "./UseFetch"
+import { useFetch } from "./UseFetch";
 
 const App = () => {
   const [values, handleChange] = useForm({
@@ -9,11 +9,14 @@ const App = () => {
     firstName: ""
   });
 
- const {data, loading} = useFetch('http://numbersapi.com/43/trivia')
+  const { count, setCount } = useState(0);
+  const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
 
   return (
     <div>
-      <div>{loading ? "loading ..." : data}</div>
+      <div>{!loading ? "loading ..." : data}</div>
+      <div>count is: {count}</div>
+      <button onClick={() => setCount(c => c + 1)}>increment count</button>
       <input
         name="firstName"
         placeholder="First name"
