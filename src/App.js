@@ -8,14 +8,16 @@ const App = () => {
     password: "",
     firstName: ""
   });
-
-  const { count, setCount } = useState(0);
+  // load the value of count from local storage
+  const { count, setCount } = useState(() =>
+    JSON.parse(localStorage.getItem("count"))
+  );
   const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
- 
+
   // persist the value of count in local storage
-  useEffect(()=>{
-    localStorage.setItem('count', JSON.stringify(count))
-  }, [count])
+  useEffect(() => {
+    localStorage.setItem("count", JSON.stringify(count));
+  }, [count]);
 
   return (
     <div>
