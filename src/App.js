@@ -14,6 +14,7 @@ const App = () => {
   );
   const { data, loading } = useFetch(`http://numbersapi.com/42/trivia`);
   const inputRef = useRef()
+  console.log("count is", count)
 
   // persist the value of count in local storage
   useEffect(() => {
@@ -46,7 +47,7 @@ const App = () => {
         onChange={handleChange}
       />
       <button onClick={()=> {
-        console.log(inputRef)
+        console.log(inputRef.current)
       }}>focus</button>
     </div>
   );
