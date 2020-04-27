@@ -11,10 +11,10 @@ const App = () => {
 
   const { count, setCount } = useState(0);
   const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
-
+  console.log("setcount is", count, setCount)
   return (
     <div>
-      <div>{!loading ? "loading ..." : data}</div>
+      <div>{!data ? "loading ..." : data}</div>
       <div>count is: {count}</div>
       <button onClick={() => setCount(c => c + 1)}>increment count</button>
       <input
