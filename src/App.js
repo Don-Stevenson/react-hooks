@@ -23,9 +23,9 @@ const App = () => {
 
   return (
     <div>
-      <div>{!data ? "loading ..." : data}</div>
-      <div>The count is: {count}</div>
-      <button onClick={() => setCount(c => c + 1)}>Increment count</button>
+      <div style={{backgroundColor: 'lightyellow'}}>{!data ? "loading ..." : data}</div>
+      <div style={{backgroundColor: 'lightyellow'}}>The count is: {count}</div>
+      <button style={{backgroundColor: 'lightblue'}} onClick={() => setCount(c => c + 1)}>Increment count</button>
       <input
         name="firstName"
         placeholder="First name"
