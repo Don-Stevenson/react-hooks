@@ -23,8 +23,8 @@ const App = () => {
 
   return (
     <div>
-      <div style={{backgroundColor: 'lightyellow'}}>{!data ? "loading ..." : data}</div>
-      <div style={{backgroundColor: 'lightyellow'}}>The count is: {count}</div>
+      <div style={{backgroundColor: 'lightblue'}}>{!data ? "loading ..." : data}</div>
+      <div style={{backgroundColor: 'lightblue'}}>The count is: {count}</div>
       <button style={{backgroundColor: 'lightblue'}} onClick={() => setCount(c => c + 1)}>Increment count</button>
       <input
         name="firstName"
@@ -46,7 +46,7 @@ const App = () => {
         value={values.password}
         onChange={handleChange}
       />
-      <button
+      <button style={{backgroundColor: 'lightyellow'}}
         onClick={() => {
           console.log(inputRef.current);
         }}
