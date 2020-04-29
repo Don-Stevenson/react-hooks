@@ -15,9 +15,7 @@ const App = () => {
 
   const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
   const inputRef = useRef();
-  console.log("count is, setcount is", count, setCount);
-  console.log("use state is", useState(0)["0"]);
-
+  
   // persist the value of count in local storage
   useEffect(() => {
     localStorage.setItem("count", JSON.stringify(count));
