@@ -9,14 +9,14 @@ const App = () => {
     firstName: ""
   });
   // load the value of count from local storage
-  const { count, setCount } = useState(0);
-  //   (() =>
-  //   JSON.parse(localStorage.getItem("count"))
-  // );
-  const { data, loading } = useFetch(`http://numbersapi.com/42/trivia`);
+  const [count, setCount] = useState(() =>
+    JSON.parse(localStorage.getItem("count"))
+  );
+
+  const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
   const inputRef = useRef();
   console.log("count is, setcount is", count, setCount);
-  console.log("use state is", useState(0));
+  console.log("use state is", useState(0)["0"]);
 
   // persist the value of count in local storage
   useEffect(() => {
