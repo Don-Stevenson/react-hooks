@@ -48,7 +48,7 @@ const App = () => {
       />
       <button style={{backgroundColor: 'lightpink'}}
         onClick={() => {
-          console.log(inputRef.current);
+          inputRef.current.focus();
         }}
       >
         focus
