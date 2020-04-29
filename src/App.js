@@ -24,8 +24,8 @@ const App = () => {
   return (
     <div>
       <div>{!data ? "loading ..." : data}</div>
-      <div>count is: {count}</div>
-      <button onClick={() => setCount(c => c + 1)}>increment count</button>
+      <div>The count is: {count}</div>
+      <button onClick={() => setCount(c => c + 1)}>Increment count</button>
       <input
         name="firstName"
         placeholder="First name"
