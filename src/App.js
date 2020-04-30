@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useForm } from "./useForm";
 import { useFetch } from "./UseFetch";
-import { Hello } from "./Hello"
+import { Hello } from "./Hello";
 
 const App = () => {
   const [values, handleChange] = useForm({
@@ -16,7 +16,7 @@ const App = () => {
 
   const { data } = useFetch(`http://numbersapi.com/${count}/trivia`);
   const inputRef = useRef();
-  const [showHello, setShowHello] = useState(true)
+  const [showHello, setShowHello] = useState(true);
 
   // persist the value of count in local storage
   useEffect(() => {
@@ -25,10 +25,14 @@ const App = () => {
 
   return (
     <div>
-      <div style={{backgroundColor: 'lightblue', textAlign: 'center'}}>{!data ? "loading ..." : data}</div>
-      <div style={{backgroundColor: 'lightblue', textAlign: 'center'}}>The count is: {count}</div>
-      <button style={{backgroundColor: 'lightblue'}} onClick={() => setCount(c => c + 1)}>Increment count</button>
-      <button style={{backgroundColor: 'lightblue'}} onClick={() => setShowHello(!showHello)}>Toggle</button>
+      <div style={style.text}>{!data ? "loading ..." : data}</div>
+      <div style={style.text}>The count is: {count}</div>
+      <button style={style.button} onClick={() => setCount(c => c + 1)}>
+        Increment count
+      </button>
+      <button style={style.button} onClick={() => setShowHello(!showHello)}>
+        Toggle
+      </button>
       {showHello && <Hello />}
       <input
         name="firstName"
@@ -50,7 +54,8 @@ const App = () => {
         value={values.password}
         onChange={handleChange}
       />
-      <button style={{backgroundColor: 'lightpink'}}
+      <button
+        style={{ backgroundColor: "lightpink" }}
         onClick={() => {
           inputRef.current.focus();
         }}
@@ -59,6 +64,11 @@ const App = () => {
       </button>
     </div>
   );
+};
+
+const style = {
+  text: { backgroundColor: "lightblue", textAlign: "center" },
+  button: { backgroundColor: "lightblue" }
 };
 
 export default App;
