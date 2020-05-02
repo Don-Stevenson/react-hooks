@@ -5,7 +5,14 @@ import { Hello } from "./Hello";
 import "./App.css";
 
 const App = () => {
-  
+  const [count , setCount] = useState(0);
+  return (
+    <div>
+      <Hello increment={()=> setCount(count +1)} />
+      <div> count : {count} </div>
+    </div>
+  )
+
 }
 
 // const App = () => {
