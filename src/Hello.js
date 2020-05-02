@@ -3,6 +3,6 @@ import { useCountRenders } from "./useCountRenders";
 
 export const Hello = React.memo(({ increment }) => {
   useCountRenders();
-
-  return <button onClick={increment}>Hello</button>;
+  // passing five into increment 
+  return <button onClick={() => increment(5)}>Hello</button>;
 });
