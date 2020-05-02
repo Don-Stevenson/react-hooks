@@ -4,10 +4,11 @@ import { Hello } from "./Hello";
 const App = () => {
   const [count, setCount] = useState(0);
 
+  // useCallback prevents the set count to be rendered uncessarily
   const increment = useCallback(() => {
-    setCount(count + 1);
-  }, [count, setCount]);
-  
+    setCount(c => c + 1);
+  }, [setCount]);
+
   return (
     <div>
       <Hello increment={increment} />
