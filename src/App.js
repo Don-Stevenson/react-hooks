@@ -5,6 +5,7 @@ const App = () => {
   const [count, setCount] = useState(0);
 
   // useCallback prevents the set count to be rendered uncessarily
+  // passing a variable into increment from Hello js
   const increment = useCallback(
     n => {
       setCount(c => c + n);
