@@ -3,8 +3,9 @@ import { Hello } from "./Hello";
 
 const App = () => {
   const [count, setCount] = useState(0);
+  const favNums = [77, 14, 6]
 
-  // useCallback prevents the set count to be rendered uncessarily
+  // useCallback prevents the set count to be rendered unnecessarily
   // passing a variable into increment from Hello js
   const increment = useCallback(
     n => {
@@ -17,6 +18,9 @@ const App = () => {
     <div>
       <Hello increment={increment} />
       <div> count : {count} </div>
+  <div> {favNums.map((n) => {
+
+  } )}</div>
     </div>
   );
 };
