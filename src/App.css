@@ -1,8 +1,8 @@
-div {
-  backgroundcolor: "lightblue";
-  textalign: "center";
+.App {
+  background-color: "lightblue";
+  text-align: "center";
 }
 
-button {
-  backgroundcolor: "lightblue";
+.App_button {
+  background-color: "lightblue";
 }

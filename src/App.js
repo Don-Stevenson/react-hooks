@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { Hello } from "./Hello";
 import { Square } from "./Square";
+import "./App.css"
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -18,19 +19,14 @@ const App = () => {
   return (
     <div>
       <Hello increment={increment} />
-      <div style={style.square}> count : {count} </div>
+      <div className="App"> count : {count} </div>
       {favNums.map(n => {
-        return <Square style={style.square} increment={increment} n={n} key={n}/>;
+        return <Square className="App_button" increment={increment} n={n} key={n}/>;
       })}
     </div>
   ); 
   
 };
-    const style = {
-      square: {
-        height: 100
-      }
-    }
 
 // const App = () => {
 //   const [values, handleChange] = useForm({
