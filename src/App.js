@@ -8,7 +8,7 @@ const Div = styled.div`
   margin: 20px;
   border: 15px outset lightblue;
   &:hover {
-    background-color: lightyellow;
+    background-color: #F1F1F1;
   }
 `;
 
