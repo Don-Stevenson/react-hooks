@@ -1,21 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { Hello } from "./Hello";
 import { Square } from "./Square";
-import styled from "styled-components";
-
-const Div = styled.div`
-  font-size: 20px;
-  margin: 20px;
-  border: 15px outset lightblue;
-  &:hover {
-    background-color: #F1F1F1;
-  }
-`;
-
-const Paragraph = styled.p`
-  font-size: 30px;
-  text-align: center;
-`;
+import { Div, Paragraph } from "./AppStyles";
 
 const App = () => {
   const [count, setCount] = useState(0);
