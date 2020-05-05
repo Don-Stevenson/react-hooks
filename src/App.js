@@ -20,11 +20,18 @@ const App = () => {
       <Hello increment={increment} />
       <div> count : {count} </div>
       {favNums.map(n => {
-        return <Square increment={increment} n={n} key={n}/>;
+        return <Square style={style.square} increment={increment} n={n} key={n}/>;
       })}
     </div>
-  );
+  ); 
+  
 };
+    const style = {
+      square: {
+        text: center,
+        backgroundcolor: lightBlue,
+      }
+    }
 
 // const App = () => {
 //   const [values, handleChange] = useForm({
