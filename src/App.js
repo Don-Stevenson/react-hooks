@@ -8,7 +8,7 @@ const Div = styled.div`
   margin: 20px;
   border: 15px outset lightblue;
   &:hover {
-    background-color: lightgreen;
+    background-color: lightyellow;
   }
 `;
 
@@ -19,7 +19,7 @@ const Paragraph = styled.p`
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const favNums = [77, 14, 6];
+  const favNums = [10, 15, 3];
 
   // useCallback prevents the set count to be rendered unnecessarily
   // passing a variable into increment from Hello js

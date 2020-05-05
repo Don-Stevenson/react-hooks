@@ -5,5 +5,5 @@ import { useCountRenders } from "./useCountRenders";
 export const Square = React.memo(({ n, increment }) => {
   useCountRenders();
   // passing n into increment
-  return <button onClick={() => increment(n)}>n is: {n}</button>;
+  return <button onClick={() => increment(n)}>Add: {n}</button>;
 });
