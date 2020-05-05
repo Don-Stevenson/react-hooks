@@ -1,18 +1,19 @@
 import React, { useState, useCallback } from "react";
 import { Hello } from "./Hello";
 import { Square } from "./Square";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Div = styled.div`
-  margin: 40px;
-  border: 5px outset pink;
+  font-size: 20px;
+  margin: 20px;
+  border: 15px outset lightblue;
   &:hover {
-   background-color: yellow;
- }
+    background-color: lightgreen;
+  }
 `;
 
 const Paragraph = styled.p`
-  font-size: 15px;
+  font-size: 30px;
   text-align: center;
 `;
 
@@ -34,11 +35,12 @@ const App = () => {
       <Hello increment={increment} />
       <Paragraph> count : {count} </Paragraph>
       {favNums.map(n => {
-        return <Square className="App_button" increment={increment} n={n} key={n}/>;
+        return (
+          <Square className="App_button" increment={increment} n={n} key={n} />
+        );
       })}
     </Div>
-  ); 
-  
+  );
 };
 
 // const App = () => {
