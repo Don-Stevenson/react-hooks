@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div>
       <Hello increment={increment} />
-      <div className="App"> count : {count} </div>
+      <div className={App}> count : {count} </div>
       {favNums.map(n => {
         return <Square className="App_button" increment={increment} n={n} key={n}/>;
       })}
