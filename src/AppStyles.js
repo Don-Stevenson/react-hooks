@@ -13,7 +13,7 @@ export const Paragraph = styled.p`
   font-size: 30px;
   text-align: center;
   &:hover {
-    background-color: lightorange;
-    font-size: 40px;
+    background-color: lightyellow;
+    border: 15px outset lightgreen;
   }
 `;
