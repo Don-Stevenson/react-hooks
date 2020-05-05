@@ -1,7 +1,20 @@
 import React, { useState, useCallback } from "react";
 import { Hello } from "./Hello";
 import { Square } from "./Square";
-import "./App.css"
+import styled from 'styled-components';
+
+const Div = styled.div`
+  margin: 40px;
+  border: 5px outset pink;
+  &:hover {
+   background-color: yellow;
+ }
+`;
+
+const Paragraph = styled.p`
+  font-size: 15px;
+  text-align: center;
+`;
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -17,13 +30,13 @@ const App = () => {
   );
 
   return (
-    <div>
+    <Div>
       <Hello increment={increment} />
-      <div className={App}> count : {count} </div>
+      <Paragraph> count : {count} </Paragraph>
       {favNums.map(n => {
         return <Square className="App_button" increment={increment} n={n} key={n}/>;
       })}
-    </div>
+    </Div>
   ); 
   
 };
