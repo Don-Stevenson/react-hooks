@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <Hello increment={increment} />
-      <div> count : {count} </div>
+      <div style={style.square}> count : {count} </div>
       {favNums.map(n => {
         return <Square style={style.square} increment={increment} n={n} key={n}/>;
       })}
@@ -28,8 +28,7 @@ const App = () => {
 };
     const style = {
       square: {
-        text: center,
-        backgroundcolor: lightBlue,
+        height: 100
       }
     }
 
